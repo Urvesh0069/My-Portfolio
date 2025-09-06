@@ -1,0 +1,14 @@
+    // <div className="min-h-screen bg-black text-white flex">
+    //   <div className="sticky top-0 h-screen">
+    //     {/* Left Sidebar */}
+    //     <Sidebar />
+    //   </div>
+    //   {/* Main Content */}
+    //   <div className="flex-1 flex flex-col items-center justify-center">
+    //     <Home />
+    //   </div>
+    //   <div className="sticky top-0 h-screen">
+    //     {/* Right Navbar */}
+    //     <Navbar />
+    //   </div>
+    // </div>
