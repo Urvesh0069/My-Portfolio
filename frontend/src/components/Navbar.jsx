@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="absolute mt-3 right-5 top-1/4 flex flex-col px-3 py-4 rounded-full border border-gray-700 w-[54px] mr-16 h-90 bg-transparent">
       <nav className="text-white flex flex-col items-center gap-6">
         <a
-          href="#introduce"
+          href="#Home"
           className="mt-2 text-gray-400 hover:text-green-400"
         >
           <FaHome size={18} />
