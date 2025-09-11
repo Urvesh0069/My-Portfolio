@@ -7,12 +7,12 @@ const Introduce = () => {
       className="flex flex-col mt-7 items-start min-h-screen px-10"
     >
       {/* Title */}
-      <div className="px-3 py-1.5 mb-14 border border-gray-500 rounded-full text-sm flex items-center gap-2 font-thin">
+      <div className="px-3 py-1.5 mt-7 mb-14 border border-gray-500 rounded-full text-sm flex items-center gap-2 font-thin">
         <span className="text-white">🏠</span> INTRODUCE
       </div>
 
       {/* Main Heading */}
-      <h1 className="text-[50px] font-light leading-[65px] h-[455px] tracking-[-0.2px] text-white mb-6">
+      <h1 className="text-[80px] leading-[90px] font-light leading-[65px] h-[455px] tracking-[-0.2px] text-white mb-6">
         Say Hi from <span className="text-green-500">Drake</span>, <br />
         Webflow Designer <br /> and Developer
       </h1>
