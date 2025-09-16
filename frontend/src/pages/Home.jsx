@@ -1,24 +1,26 @@
+import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Introduce from "../pages/Introduce";
 import About from "../pages/About";
+import { X } from "lucide-react";
 
 const Home = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
-    <div className="flex h-screen bg-zinc-800 text-white">
+    <div className="flex h-screen bg-zinc-800 text-white relative">
       {/* Left Sidebar */}
-      <Sidebar />
+      <Sidebar onOpen={() => setIsDrawerOpen(true)} />
 
       {/* Main Scrollable Content */}
       <main className="flex-1 overflow-y-auto px-6 py-10">
         <section id="introduce" className="flex items-center w-[75%] border border-red-600 ml-16">
           <Introduce />
         </section>
-
         <section id="about" className="flex items-center min-h-screen w-[75%] border border-red-600 ml-20">
           <About />
         </section>
-
         <section id="contact" className="flex items-center min-h-screen">
           <div className="text-3xl font-semibold">Contact Me</div>
         </section>
@@ -26,6 +28,53 @@ const Home = () => {
 
       {/* Right Navbar */}
       <Navbar />
+
+      {/* Settings Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[1060px] bg-black text-white z-50 transform transition-transform duration-500 ease-in-out ${
+          isDrawerOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Btn */}
+        <button
+          onClick={() => setIsDrawerOpen(false)}
+          className="absolute top-5 right-5 text-gray-400 hover:text-white"
+        >
+          <X />
+        </button>
+
+        <div className="p-8 mt-24 ml-26">
+          <h2 className="text-2xl mb-4 text-[36px]">Configuration</h2>
+          <h3 className="text-sm text-gray-400">COLORS</h3>
+          <div className="flex space-x-3 my-4">
+            {[
+              "#00e676",
+              "#ffc107",
+              "#ff5722",
+              "#00bcd4",
+              "#9e9e9e",
+              "#3f51b5",
+              "#f44336",
+              "#e91e63",
+            ].map((color, i) => (
+              <button
+                key={i}
+                className="w-8 h-8 rounded-full border-2 border-transparent"
+                style={{ backgroundColor: color }}
+              ></button>
+            ))}
+          </div>
+          <h3 className="text-sm text-gray-400 mt-8">THREE DIMENSIONAL SHAPES</h3>
+          <ul className="space-y-3 mt-3">
+            <li>Earth Lines Sphere</li>
+            <li>3D Abstract Ball</li>
+            <li>Water Waves</li>
+            <li>Liquids Wavy</li>
+            <li>Solid Color</li>
+            <li>Simple Strings</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
