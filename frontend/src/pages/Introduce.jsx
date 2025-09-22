@@ -26,42 +26,55 @@ const Introduce = () => {
       {/* Circular My Projects */}
       <div className="ml-146 mt-8">
         <a href="#about">
-        <div className="relative w-[175px] h-[175px] flex items-center justify-center ">
-          {/* Circle Border */}
-          <div className="absolute inset-0 rounded-full border border-gray-600"></div>
+          <div className="relative w-[175px] h-[175px] flex items-center justify-center ">
+            {/* Circle Border */}
+            <div className="absolute inset-0 rounded-full border border-gray-600"></div>
 
-          {/* Circular Text */}
-          <svg
-            viewBox="0 0 300 300"
-            className="absolute w-[86%] h-full text-white "
-          >
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -120, 0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0"
-              />
-            </defs>
-            <text className="text-[12px] tracking-[8px] uppercase font-thin text-white"
+            {/* Circular Text */}
+            <svg
+              viewBox="0 0 300 300"
+              className="absolute w-[86%] h-full text-white "
             >
-              <textPath
-                href="#circlePath"
-                startOffset="50%"
-                textAnchor="middle"
-                className="text-[28px] tracking-[8px] font-thin"
-                 fill="white"
-              >
-              . • .MY PROJECTS. • .MY PROJECTS
-              </textPath>
-            </text>
-          </svg>
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 150, 150 m -120, 0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0"
+                />
+              </defs>
+              <text className="text-[12px] tracking-[8px] uppercase font-thin text-white">
+                <textPath
+                  href="#circlePath"
+                  startOffset="50%"
+                  textAnchor="middle"
+                  className="text-[28px] tracking-[8px] font-thin"
+                  fill="white"
+                >
+                  . • .MY PROJECTS. • .MY PROJECTS
+                </textPath>
+              </text>
+            </svg>
 
-          {/* Center Arrow */}
+            {/* Center Arrow */}
 
-          <div href="#about" className="text-3xl text-white">
-            ↓
+            <div href="#about" className="text-3xl text-white">
+              ↓
+            </div>
           </div>
-        </div>
         </a>
+      </div>
+
+      {/* Experience & projects completed */}
+      <div className="flex mt-12 -space-x-4">
+        <div className="items-center mb-10 space-x-32">
+          <h3 className="mb-4 text-7xl font-thin text-white font-thin">10+</h3>
+          <p className="text-gray-400 text-m mt-3 w-16">Years of Experience</p>
+        </div>
+        <div>
+          <h3 className="mb-4 text-7xl font-thin text-white font-thin">182+</h3>
+          <p className="text-gray-400 text-m mt-3 w-40">
+            projects completed on 15 countries
+          </p>
+        </div>
       </div>
     </section>
   );
