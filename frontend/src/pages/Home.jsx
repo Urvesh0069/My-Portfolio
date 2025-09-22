@@ -25,7 +25,7 @@ const Home = () => {
         </section>
         <section
           id="about"
-          className="flex h-150 w-[75%] border border-red-600 ml-16"
+          className="flex h-150 w-[75%] ml-16"
         >
           <About />
         </section>
