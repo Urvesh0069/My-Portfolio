@@ -5,6 +5,9 @@ import Introduce from "../pages/Introduce";
 import About from "../pages/About";
 import { X } from "lucide-react";
 import Resume from "./Resume";
+import Services from "./Services";
+import My_skills from "./My_skills";
+import Pricing from "./Pricing";
 
 const Home = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -31,9 +34,27 @@ const Home = () => {
         </section>
         <section
           id="about"
-          className="flex h-150 w-[75%] border border-red-600 ml-16"
+          className="flex w-[75%] ml-16"
         >
           <Resume />
+        </section>
+        <section
+          id="services"
+          className="flex mt-22 w-[75%] ml-16"
+        >
+          <Services />
+        </section>
+        <section
+          id="myskills"
+          className="flex mt-22 w-[75%] ml-16"
+        >
+          <My_skills />
+        </section>
+         <section
+          id="pricing"
+          className="flex mt-22 w-[75%] ml-16"
+        >
+          <Pricing />
         </section>
       </main>
 
