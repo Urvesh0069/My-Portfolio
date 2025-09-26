@@ -8,6 +8,7 @@ import Resume from "./Resume";
 import Services from "./Services";
 import My_skills from "./My_skills";
 import Pricing from "./Pricing";
+import Portfolio from "./Portfolio";
 
 const Home = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -49,6 +50,11 @@ const Home = () => {
           className="flex mt-22 w-[75%] ml-16"
         >
           <My_skills />
+        </section>
+        <section
+          id="portfolio"
+          className="flex mt-22 w-[75%] ml-16">
+            <Portfolio />
         </section>
          <section
           id="pricing"
